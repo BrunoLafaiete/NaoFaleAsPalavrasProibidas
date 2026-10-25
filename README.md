@@ -11,7 +11,7 @@ npm ci --cache /workspace/.npm-cache
 npm run dev
 ```
 
-O Vite usa a porta 5173 por padrão. Para conferir a versão de produção:
+O Vite usa a porta 5173 por padrão, com o jogo no caminho `/NaoPode/`. Para conferir a versão de produção:
 
 ```sh
 npm test
@@ -36,3 +36,16 @@ A partida é salva no armazenamento local do navegador; o botão “Continuar pa
 ## Próximos passos
 
 Validar fisicamente no Safari do iPhone 15 e ampliar o baralho inicial para 150 cartas. A versão atual não tem multiplayer em aparelhos separados nem funcionamento offline garantido.
+
+## GitHub Pages
+
+O workflow `.github/workflows/deploy-pages.yml` testa, compila e publica a pasta `dist/` a cada push na branch `main`. O caminho `/NaoPode/` está configurado em `vite.config.ts`.
+
+1. Abra **Settings → Pages** no repositório.
+2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
+3. Na aba **Actions**, abra **Publicar no GitHub Pages**. Se necessário, use **Run workflow** na branch `main` (ou reexecute uma tentativa que falhou antes de ativar Pages).
+4. Aguarde os jobs `build` e `deploy` ficarem verdes.
+
+O endereço esperado é https://brunolafaiete.github.io/NaoPode/ . Só estará disponível depois da publicação bem-sucedida. Abra-o no Safari para validar no iPhone. Repositórios privados precisam de um plano GitHub que ofereça Pages.
+
+O workflow usa a autenticação automática do GitHub Actions, sem token pessoal ou segredo manual.
