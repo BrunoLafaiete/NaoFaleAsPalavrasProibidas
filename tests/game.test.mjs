@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {shuffle,outcome,nextTurn,remaining} from '../src/game.js';
+test('correct answers score without ending the turn',()=>assert.deepEqual(outcome('correct',true,3),{points:1,skip:0,end:false,advance:true}));
+test('normal errors discard without consuming skips or points',()=>assert.deepEqual(outcome('wrong',false,3),{points:0,skip:0,end:false,advance:true}));
+test('zero error ends turn',()=>assert.equal(outcome('wrong',true,3).end,true));
+test('skips consume allowance and stop when exhausted',()=>{assert.equal(outcome('skip',false,1).skip,1);assert.equal(outcome('skip',false,0).advance,false);});
+test('both teams get ten turns',()=>{let team=0,round=1;const turns=[0,0];for(let i=0;i<20;i++){turns[team]++;const n=nextTurn(team,round,10);assert.equal(n.finished,i===19);({team,round}=n);}assert.deepEqual(turns,[10,10]);});
+test('deadline respects elapsed time and clamps to zero',()=>{assert.equal(remaining(61000,1000),60);assert.equal(remaining(61000,60500),1);assert.equal(remaining(61000,90000),0);});
+test('shuffle preserves all cards and does not mutate source',()=>{const a=[1,2,3,4];const b=shuffle(a,()=>0);assert.deepEqual(a,[1,2,3,4]);assert.deepEqual([...b].sort(),a);assert.notDeepEqual(b,a);});

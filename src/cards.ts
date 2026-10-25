@@ -1,0 +1,61 @@
+const content = `Abacaxi|Fruta|Coroa|Amarelo|Espinho|Suco
+Avião|Voar|Piloto|Asa|Aeroporto|Céu
+Praia|Mar|Areia|Sol|Onda|Guarda-sol
+Cinema|Filme|Pipoca|Tela|Ator|Ingresso
+Chocolate|Cacau|Doce|Barra|Leite|Bombom
+Cachorro|Latir|Animal|Osso|Coleira|Gato
+Pizza|Queijo|Massa|Itália|Forno|Fatia
+Casamento|Noiva|Aliança|Festa|Vestido|Marido
+Biblioteca|Livro|Ler|Silêncio|Estante|Estudar
+Chuva|Água|Nuvem|Molhar|Tempestade|Guarda-chuva
+Aniversário|Bolo|Vela|Presente|Festa|Parabéns
+Futebol|Bola|Gol|Time|Campo|Jogador
+Sorvete|Gelado|Casquinha|Doce|Calor|Picolé
+Hospital|Médico|Doença|Enfermeiro|Paciente|Saúde
+Violão|Corda|Música|Tocar|Instrumento|Guitarra
+Café|Xícara|Preto|Bebida|Manhã|Cafeína
+Escola|Aluno|Professor|Aula|Estudar|Prova
+Bicicleta|Pedal|Roda|Guidão|Andar|Ciclista
+Pipoca|Milho|Cinema|Panela|Estourar|Manteiga
+Geladeira|Frio|Comida|Cozinha|Congelador|Eletrodoméstico
+Girassol|Flor|Amarelo|Sol|Planta|Semente
+Astronauta|Espaço|Lua|Foguete|Planeta|NASA
+Travesseiro|Dormir|Cama|Cabeça|Fronha|Macio
+Elevador|Andar|Prédio|Subir|Descer|Botão
+Saudade|Falta|Distância|Lembrança|Sentir|Ausência
+Ciúme|Inveja|Namoro|Posse|Desconfiança|Traição
+Coragem|Medo|Bravo|Enfrentar|Herói|Valente
+Segredo|Contar|Esconder|Mistério|Silêncio|Revelar
+Surpresa|Inesperado|Presente|Susto|Festa|Revelação
+Preguiça|Dormir|Cansaço|Sofá|Vontade|Descansar
+Relógio|Hora|Tempo|Ponteiro|Pulso|Minuto
+Espelho|Reflexo|Vidro|Olhar|Imagem|Banheiro
+Dinossauro|Extinto|Jurássico|Fóssil|Réptil|Pré-história
+Vulcão|Lava|Erupção|Montanha|Fogo|Magma
+Arco-íris|Cor|Chuva|Sol|Céu|Sete
+Pinguim|Ave|Gelo|Antártida|Preto|Branco
+Camaleão|Cor|Lagarto|Mudar|Camuflagem|Réptil
+Polvo|Tentáculo|Oito|Mar|Tinta|Animal
+Abelha|Mel|Colmeia|Ferrão|Inseto|Flor
+Borboleta|Asa|Lagarta|Inseto|Casulo|Voar
+Hambúrguer|Pão|Carne|Lanche|Queijo|Batata
+Lasanha|Massa|Queijo|Molho|Forno|Camada
+Brigadeiro|Chocolate|Doce|Festa|Granulado|Leite condensado
+Pão de queijo|Minas|Polvilho|Forno|Café|Bolinha
+Melancia|Fruta|Vermelho|Semente|Verde|Suco
+Cenoura|Laranja|Coelho|Legume|Raiz|Salada
+Escova|Dente|Cabelo|Pentear|Cerdas|Pasta
+Mochila|Costas|Escola|Bolsa|Alça|Carregar
+Passaporte|Viagem|Documento|País|Visto|Aeroporto
+Bússola|Norte|Direção|Agulha|Orientação|Sul
+Tesouro|Ouro|Pirata|Baú|Mapa|Riqueza
+Castelo|Rei|Princesa|Torre|Medieval|Muralha
+Fantasma|Assombração|Medo|Espírito|Lençol|Morto
+Sereia|Mar|Peixe|Cauda|Canto|Mulher
+Robô|Máquina|Metal|Programar|Automático|Inteligência artificial
+Internet|Rede|Site|Conexão|Wi-Fi|Computador
+Fotografia|Câmera|Imagem|Foto|Retrato|Lente
+Teatro|Palco|Ator|Peça|Plateia|Cortina
+Karaokê|Cantar|Microfone|Música|Letra|Voz
+Namoro|Amor|Casal|Beijo|Relacionamento|Encontro`;
+export const cards = content.split('\n').map((line, id) => { const [word, ...forbidden] = line.split('|'); return {id, word, forbidden}; });
