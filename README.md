@@ -11,7 +11,7 @@ npm ci --cache /workspace/.npm-cache
 npm run dev
 ```
 
-O Vite usa a porta 5173 por padrão, com o jogo no caminho `/NaoPode/`. Para conferir a versão de produção:
+O Vite usa a porta 5173 por padrão, com o jogo no caminho `/NaoFale-jogo/`. Para conferir a versão de produção:
 
 ```sh
 npm test
@@ -39,13 +39,13 @@ Validar fisicamente no Safari do iPhone 15 e ampliar o baralho inicial para 150 
 
 ## GitHub Pages
 
-O workflow `.github/workflows/deploy-pages.yml` testa, compila e publica a pasta `dist/` a cada push na branch `main`. O caminho `/NaoPode/` está configurado em `vite.config.ts`.
+O workflow `.github/workflows/deploy-pages.yml` testa, compila e publica a pasta `dist/` a cada push na branch `main`. O caminho `/NaoFale-jogo/` está configurado em `vite.config.ts`.
 
 1. Abra **Settings → Pages** no repositório.
 2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
 3. Na aba **Actions**, abra **Publicar no GitHub Pages**. Se necessário, use **Run workflow** na branch `main` (ou reexecute uma tentativa que falhou antes de ativar Pages).
 4. Aguarde os jobs `build` e `deploy` ficarem verdes.
 
-O endereço esperado é https://brunolafaiete.github.io/NaoPode/ . Só estará disponível depois da publicação bem-sucedida. Abra-o no Safari para validar no iPhone. Repositórios privados precisam de um plano GitHub que ofereça Pages.
+O endereço esperado é https://brunolafaiete.github.io/NaoFale-jogo/ . Só estará disponível depois da publicação bem-sucedida. Abra-o no Safari para validar no iPhone. Repositórios privados precisam de um plano GitHub que ofereça Pages.
 
 O workflow usa a autenticação automática do GitHub Actions, sem token pessoal ou segredo manual.

@@ -5,7 +5,7 @@ with sync_playwright() as p:
  page=browser.new_page(viewport={'width':393,'height':852},device_scale_factor=1,is_mobile=True,has_touch=True)
  errors=[]
  page.on('pageerror',lambda error:errors.append(str(error)))
- page.goto('http://127.0.0.1:5173/NaoPode/')
+ page.goto('http://127.0.0.1:5173/NaoFale-jogo/')
  page.get_by_role('button',name='Vamos jogar').click()
  assert page.get_by_label('Número de rodadas').input_value()=='10'
  page.get_by_label('Número de rodadas').fill('1')
