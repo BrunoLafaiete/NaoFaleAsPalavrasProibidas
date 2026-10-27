@@ -46,6 +46,6 @@ O workflow `.github/workflows/deploy-pages.yml` testa, compila e publica a pasta
 3. Na aba **Actions**, abra **Publicar no GitHub Pages**. Se necessário, use **Run workflow** na branch `main` (ou reexecute uma tentativa que falhou antes de ativar Pages).
 4. Aguarde os jobs `build` e `deploy` ficarem verdes.
 
-O endereço esperado é https://brunolafaiete.github.io/NaoFale-jogo/ . Só estará disponível depois da publicação bem-sucedida. Abra-o no Safari para validar no iPhone. Repositórios privados precisam de um plano GitHub que ofereça Pages.
+O endereço esperado é https://brunolafaiete.github.io/NaoFaleAsPalavrasProibidas/ . Só estará disponível depois da publicação bem-sucedida. Abra-o no Safari para validar no iPhone. Repositórios privados precisam de um plano GitHub que ofereça Pages.
 
 O workflow usa a autenticação automática do GitHub Actions, sem token pessoal ou segredo manual.
