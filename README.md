@@ -1,4 +1,4 @@
-# Não Pode!
+# Não fale as palavras proibídas!
 
 Jogo web de palavras em português para duas equipes compartilharem um celular. Interface responsiva, sem conta e sem backend.
 
