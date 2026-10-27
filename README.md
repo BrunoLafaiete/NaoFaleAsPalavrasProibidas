@@ -11,7 +11,7 @@ npm ci --cache /workspace/.npm-cache
 npm run dev
 ```
 
-O Vite usa a porta 5173 por padrão, com o jogo no caminho `/NaoFale-jogo/`. Para conferir a versão de produção:
+O Vite usa a porta 5173 por padrão, com o jogo no caminho `/NaoFaleAsPalavrasProibidas/`. Para conferir a versão de produção:
 
 ```sh
 npm test
@@ -39,7 +39,7 @@ Validar fisicamente no Safari do iPhone 15 e ampliar o baralho inicial para 150 
 
 ## GitHub Pages
 
-O workflow `.github/workflows/deploy-pages.yml` testa, compila e publica a pasta `dist/` a cada push na branch `main`. O caminho `/NaoFale-jogo/` está configurado em `vite.config.ts`.
+O workflow `.github/workflows/deploy-pages.yml` testa, compila e publica a pasta `dist/` a cada push na branch `main`. O caminho `/NaoFaleAsPalavrasProibidas/` está configurado em `vite.config.ts`.
 
 1. Abra **Settings → Pages** no repositório.
 2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
